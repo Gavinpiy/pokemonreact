@@ -1,7 +1,6 @@
 import { useState } from "react";
 import logo from "./logo.jpg";
-import fetchPokemon from "./pokemonfetch/fetch";
-
+import FetchPokemon from "./pokemonfetch/fetch";
 function App() {
   // set state for initial pokemon id
   const [id, setId] = useState(1);
@@ -13,7 +12,7 @@ function App() {
     <div>
       <img src={logo} alt="logo"></img>
       <button onClick={handleClick}>Catch a Pokemon</button>
-      <fetchPokemon id={id}/>
+      <FetchPokemon id={id}/>
     </div>
   );
 }
