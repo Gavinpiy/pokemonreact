@@ -16,7 +16,7 @@ const FetchPokemon = (props) => {
         throw Error(response.status);
       }
       const data = await response.json();
-      console.log(response)
+    //   console.log(response)
       //update name to fetched data
       setPokemon(data.name);
 
