@@ -1,4 +1,6 @@
 import { useState } from "react";
+import logo from "./logo.jpg";
+import fetchPokemon from "./pokemonfetch/fetch";
 
 function App() {
   // set state for initial pokemon id
@@ -7,7 +9,13 @@ function App() {
   function handleClick() {
     setId(Math.floor(Math.random() * 1000 + 1) + 1);
   }
-  return <div>{id}</div>;
+  return (
+    <div>
+      <img src={logo} alt="logo"></img>
+      <button onClick={handleClick}>Catch a Pokemon</button>
+      <fetchPokemon id={id}/>
+    </div>
+  );
 }
 
 export default App;
