@@ -1,12 +1,12 @@
 .App {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 500px;
+  width: 40vw;
+  height: 40vw;
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: 5rem auto;
+  margin: 2rem auto;
   font-family: "Arial", sans-serif;
   border: #000000 solid 5px;
   border-radius: 50%;
@@ -18,12 +18,20 @@
     var(--pokeball-red) 100%
   );
 }
+@media (max-width: 600px) {
+  .App {
+    width: 90vw; /* increase to 80% of the viewport width for smaller screens */
+    height: 90vw; /* equal to the width to maintain a 1:1 aspect ratio */
+  }
+}
 
 .img {
   border: solid black 2px;
   border-radius: 50%;
   margin: 20px;
   background-color: #ffffff;
+  width: 20%;
+  height: 20%;
 }
 
 /* Define Poké Ball colors */
@@ -61,8 +69,8 @@ button {
 
 .logo {
   width: 15%;
-  padding-top: 0%;
-  padding-bottom: 50px;
+  padding-top: 5%;
+  padding-bottom: 5px;
 }
 
 .pokemon-viewer {
